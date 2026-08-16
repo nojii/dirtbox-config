@@ -39,8 +39,3 @@ glide config.
 ## installation
 
 just paste the `garrysmod` folder from the repo over your own.
-
-```text id="m9u0jv"
-garrysmod/cfg/autoexec.cfg
-garrysmod/data/glide.json
-```
