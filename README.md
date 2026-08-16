@@ -6,16 +6,14 @@ official config files for dirtbox collection - gmod.
 
 ### hud
 
-* gets rid of the weapon seats crosshair.
+* gets rid of the crosshair from inside a vehicle.
 * gets rid of the tacrp hud.
-* gets rid of the tacrp minimal hud.
-* turns off tacrp hints.
 * gets rid of the ulx motd.
 
 ### weapons
 
 * turns off tacrp auto reload.
-* turns off sandbox weapons (when you spawn).
+* turns off spawn weapons.
 * sets sentry vj weapon accuracy to 1.
 
 ### bind
@@ -30,9 +28,8 @@ glide config.
 
 ### changes
 
-* `f` is the vehicle horn key.
 * turns off the vehicle hud.
-* turns off the player list inside vehicles.
+* `f` - horn key.
 
 ---
 
