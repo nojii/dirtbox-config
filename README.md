@@ -1,38 +1,83 @@
 # dirtbox
 
-official config files for dirtbox collection - gmod.
+official config files for the **dirtbox** collection — garry's mod.
+
+drop-in tweaks that clean up the hud, tame a few weapon addons and set up glide vehicles the way they're meant to be played.
+
+---
+
+## what's inside
+
+```
+garrysmod/
+├── cfg/
+│   └── autoexec.cfg   → console tweaks, runs every time the game starts
+└── data/
+    └── glide.json     → glide vehicle settings + keybinds
+```
+
+---
 
 ## `autoexec.cfg`
 
 ### hud
 
-* gets rid of the crosshair from inside a vehicle.
-* gets rid of the tacrp hud.
-* gets rid of the ulx motd.
+| command | value | what it does |
+| --- | --- | --- |
+| `weaponseats_crosshair` | `0` | removes the crosshair while sitting in a vehicle |
+| `tacrp_hud` | `0` | hides the tacrp hud |
+| `tacrp_minhud` | `0` | hides the tacrp minimal hud |
+| `tacrp_drawhud` | `0` | stops tacrp from drawing hud elements |
+| `tacrp_hints` | `0` | hides tacrp control hints |
+| `ulx showMotd` | `0` | disables the ulx motd popup on join |
 
 ### weapons
 
-* turns off tacrp auto reload.
-* turns off spawn weapons.
-* sets sentry vj weapon accuracy to 1.
+| command | value | what it does |
+| --- | --- | --- |
+| `tacrp_autoreload` | `0` | no more automatic reloading on an empty mag |
+| `sbox_weapons` | `0` | you spawn with no default weapons |
+| `vj_senwepaccuracy_custom` | `1` | sets vj sentry weapon accuracy to 1 |
 
-### bind
+### binds
 
-* `f11` - blows your brains out.
+| key | command | what it does |
+| --- | --- | --- |
+| `F11` | `csd_toggle` | blows your brains out |
+
+> `sbox_weapons` and `ulx showMotd` are server-side — they only take effect when you're the one hosting.
 
 ---
 
 ## `glide.json`
 
-glide config.
+full glide settings file. almost everything is glide's default — the changes are:
 
-### changes
+| setting | change |
+| --- | --- |
+| vehicle hud | **off** (`showHUD: false`) |
+| horn (cars) | moved to **`F`** |
 
-* turns off the vehicle hud.
-* `f` - horn key.
+---
+
+## requirements
+
+the configs only do something if the matching addons are installed — all of them are part of the dirtbox collection:
+
+- **tacrp**
+- **vj base** (sentry weapons)
+- **ulx**
+- **weapon seats**
+- **glide**
+- the addon that provides `csd_toggle`
 
 ---
 
 ## installation
 
-just paste the `garrysmod` folder from the repo over your own.
+1. open your garry's mod folder
+   - steam → right-click garry's mod → **manage → browse local files**
+2. copy the `garrysmod` folder from this repo over your own and accept the overwrite.
+3. restart the game.
+
+> **heads up:** this **replaces** your existing `autoexec.cfg` and glide settings. if you already have stuff in there, back them up first — or just paste the line from `autoexec.cfg` into your own file instead of overwriting it.
